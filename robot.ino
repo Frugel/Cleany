@@ -145,7 +145,12 @@ void autoModo1()
 }
 
 
-void loop() {
+void loop() { 
+//  int centimetros; 
+//  centimetros = ultrasonic.Ranging(CM);
+  //  Serial.print("Distancia:");
+  //  Serial.print(centimetros); 
+  //  Serial.println(" centimetros");
   
   boolean modeAuto = false;
   if (irrecv.decode(&results)) {
@@ -180,6 +185,102 @@ void loop() {
   if(modeAuto){
     autoModo1();
   }
+
+
+//  if (centimetros>=dis)                           //20 centimetros es la distancia de emergencia
+//  {
+//    adelante();
+//    delay(500);
+//  }
+//  else if (centimetros<dis)
+//  {    
+//    parada();
+//
+//    int myInts[19];
+//    servo1.write(0);
+//    delay(100);
+//    for (int i=0; i <= 18; i++){
+//
+//      myInts[i]= ultrasonic.Ranging(CM);
+//      delay(10);
+//      myInts[i]=myInts[i] + ultrasonic.Ranging(CM);
+//      delay(10);
+//      myInts[i]=myInts[i] + ultrasonic.Ranging(CM);
+//      delay(10);
+//      myInts[i]=myInts[i] + ultrasonic.Ranging(CM);
+//      delay(10);
+//
+//      myInts[i]= (myInts[i]/4);
+//
+//      pos =i*10;
+//      servo1.write(pos);
+//      delay(100);
+//    }
+//
+//    servo1.write(90);
+//    delay(100);
+//
+//    Serial.println(myInts[0]);
+//    Serial.println(myInts[1]);
+//    Serial.println(myInts[2]);
+//    Serial.println(myInts[3]);
+//    Serial.println(myInts[4]);
+//    Serial.println(myInts[5]);
+//    Serial.println(myInts[6]);
+//    Serial.println(myInts[7]);
+//    Serial.println(myInts[8]);
+//    Serial.println(myInts[9]);
+//
+//    if( (myInts[0]>dis) &&  (myInts[1]>dis) && (myInts[2]>dis) && (myInts[3]>dis) && (myInts[4]>dis) 
+//      && (myInts[5]>dis) && (myInts[6]>dis) && (myInts[7]>dis) && (myInts[8]>dis) && (myInts[9]>dis) ){
+//
+//      derecha();
+//      delay(1000);
+//
+//    }
+//    else if( (myInts[10]>dis) &&  (myInts[11]>dis) && (myInts[12]>dis) && (myInts[13]>dis) && (myInts[14]>dis) 
+//      && (myInts[15]>dis) && (myInts[16]>dis) && (myInts[17]>dis) && (myInts[18]>dis) ){
+//
+//      izquierda();
+//      delay(1000);
+//
+//    }
+//    else{
+//      atras();
+//      delay(2000);
+//
+//      izquierda();
+//      delay(1000);
+//    }
+//  }
+
+
+
+
+//if (centimetros>=dis)                           //20 cm es la distancia de emergencia
+//  {
+//    adelante();
+//    
+//    servo1.write(pos);
+//    delay(200);
+//    pos = ((pos+15) % 179);
+//  
+//  }
+//  else if (centimetros<dis)
+//  {    
+//    if(pos<60){
+//      izquierda();
+//      delay(1000);
+//    }else if(pos>120){
+//      derecha();
+//      delay(1000);
+//    }else{
+//      atras();
+//      delay(2000);
+//    } 
+//  }
+
+
 }
 
 
