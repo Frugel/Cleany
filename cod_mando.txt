@@ -1,8 +1,0 @@
-adelante->16712445
-atras->16750695
-derecha->16748655
-izquierda->16769055
-parar->16754775
-
-autoOn->16753245
-autoOff->16769565
